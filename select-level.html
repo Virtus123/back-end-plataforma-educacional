@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecione o Nível - Plataforma Educacional</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Escolha o Nível</h1>
+            <div class="user-info" id="userInfo"></div>
+            <button onclick="logout()" class="logout-btn">Sair</button>
+        </header>
+        <div class="challenges-container">
+            <div class="challenge-card">
+                <h2>Iniciante</h2>
+                <button onclick="selectLevel('beginner')">Começar</button>
+            </div>
+            <div class="challenge-card">
+                <h2>Intermediário</h2>
+                <button onclick="selectLevel('intermediate')">Começar</button>
+            </div>
+            <div class="challenge-card">
+                <h2>Avançado</h2>
+                <button onclick="selectLevel('advanced')">Começar</button>
+            </div>
+        </div>
+        <button onclick="window.location.href='dashboard.html'" class="back-btn">Voltar</button>
+    </div>
+    <script src="js/database.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/select-level.js"></script>
+</body>
+</html>

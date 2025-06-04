@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matérias - Plataforma Educacional</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Escolha a Matéria</h1>
+            <div class="user-info" id="userInfo"></div>
+            <button onclick="logout()" class="logout-btn">Sair</button>
+        </header>
+        
+        <div class="subjects-grid">
+            <button onclick="selectSubject('matematica')">Matemática</button>
+            <button onclick="selectSubject('portugues')">Português</button>
+            <button onclick="selectSubject('ciencias')">Ciências</button>
+            <button onclick="selectSubject('historia')">História</button>
+            <button onclick="selectSubject('geografia')">Geografia</button>
+        </div>
+        <button onclick="window.location.href='dashboard.html'" class="back-btn">Voltar</button>
+    </div>
+    <script src="js/database.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/subjects.js"></script>
+</body>
+</html>

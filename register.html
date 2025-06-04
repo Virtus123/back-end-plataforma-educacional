@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Plataforma Educacional</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <h1>Cadastro - Plataforma Educacional</h1>
+            <form id="registerForm" class="form">
+                <input type="text" id="registerName" placeholder="Nome completo" required>
+                <input type="number" id="registerAge" placeholder="Idade" required>
+                <select id="registerGender" required>
+                    <option value="">Selecione o sexo</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                    <option value="O">Outro</option>
+                </select>
+                <input type="text" id="registerSchool" placeholder="Escola" required>
+                <input type="text" id="registerClass" placeholder="Turma" required>
+                <select id="registerShift" required>
+                    <option value="">Selecione o turno</option>
+                    <option value="morning">Manhã</option>
+                    <option value="afternoon">Tarde</option>
+                    <option value="night">Noite</option>
+                </select>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+                <p>Já tem uma conta? <a href="index.html">Faça login</a></p>
+            </form>
+        </div>
+    </div>    <script src="js/auth.js"></script>
+</body>
+</html>
