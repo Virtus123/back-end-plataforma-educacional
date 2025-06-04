@@ -15,7 +15,7 @@ async function generateQuestions(subject, level) {
         }[level] || level;
 
         const prompt = `Você é um professor experiente criando questões de múltipla escolha.
-        Gere exatamente 5 questões de ${subject} para alunos de nível ${nivelTraduzido}. 
+        Gere exatamente 10 questões de ${subject} para alunos de nível ${nivelTraduzido}, primeiro ano do ensino médio. 
         As questões devem estar em português brasileiro e adequadas para estudantes deste nível.
         
         IMPORTANTE: Sua resposta deve ser SOMENTE um objeto JSON válido no formato abaixo, sem nenhum texto antes ou depois:
