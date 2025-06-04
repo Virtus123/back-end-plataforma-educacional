@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz - Plataforma Educacional</title>
+    <title>Quiz - Estude-Aqui</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./img/Logo CCM.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Logo CCM.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -15,12 +17,13 @@
         
         <div class="quiz-container">
             <div id="questionContainer"></div>
-            <button id="submitQuiz" onclick="submitQuiz()">Finalizar</button>
-            <button onclick="window.location.href='subjects.html'" class="back-btn">Voltar</button>
+            <button id="submitQuiz" onclick="submitQuiz()" class="back-btn">Finalizar</button>
+            <button onclick="window.location.href='dashboard.html'" class="back-btn">Voltar</button>
         </div>
     </div>
     <script src="js/database.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/quiz.js"></script>
+    <script src="./js/dashboard.js"></script>
 </body>
 </html>
