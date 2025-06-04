@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Plataforma Educacional</title>
+    <title>Selecione o Nível - Estude-Aqui</title>
+    <link rel="icon" href="./img/Logo CCM.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Logo CCM.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="container">
-        <header class="dashboard-header">
-            <h1>Plataforma Educacional</h1>
-            <div class="user-info" id="userInfo"></div>
-            <button onclick="logout()" class="logout-btn">Sair</button>
-        </header>
-        
-        <div class="subjects-grid">
-            <button onclick="selectSubject('matematica')">Matemática</button>
-            <button onclick="selectSubject('portugues')">Português</button>
-            <button onclick="selectSubject('ciencias')">Ciências</button>
-            <button onclick="selectSubject('historia')">História</button>
-            <button onclick="selectSubject('geografia')">Geografia</button>
-        </div>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="./img/Logo CCM.png" alt="Logo" class="logo">
+                <h2>Estude-Aqui</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-details" id="userInfo"></div>
+                    </div>
+                    <button onclick="logout()" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sair</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-container">
+                <div class="subjects-grid">
+                    <button class="button-materias" onclick="selectSubject('matematica')">Matemática</button>
+                    <button class="button-materias" onclick="selectSubject('portugues')">Português</button>
+                    <button class="button-materias" onclick="selectSubject('historia')">História</button>
+                    <button class="button-materias" onclick="selectSubject('geografia')">Geografia</button>
+                    <button class="button-materias" onclick="selectSubject('Física')">Física</button>
+                    <button class="button-materias" onclick="selectSubject('Biologia')">Biologia</button>
+                    <button class="button-materias" onclick="selectSubject('Química')">Química</button>
+                    <button class="button-materias" onclick="selectSubject('Sociologia')">Sociologia</button>
+                    <button class="button-materias" onclick="selectSubject('Filosofia')">Filosofia</button>
+                    <button class="button-materias" onclick="selectSubject('Programação')">Programação</button>
+                </div>
+            </div>
+
+            <div class="dashboard-footer">
+                <button onclick="window.location.href='dashboard.html'" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar para matérias
+                </button>
+                <div class="motivational-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>A educação é a arma mais poderosa que você pode usar para mudar o mundo.</p>
+                    <span>- Nelson Mandela</span>
+                </div>
+            </div>
     </div>
+    </main>
+    </div>
+
     <script src="js/database.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/dashboard.js"></script>
 </body>
+
 </html>
