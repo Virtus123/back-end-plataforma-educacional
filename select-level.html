@@ -1,36 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selecione o Nível - Plataforma Educacional</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Selecione o Nível - Estude-Aqui</title>
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="./img/Logo CCM.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Logo CCM.png" type="image/x-icon">
 </head>
+
 <body>
-    <div class="container">
-        <header class="dashboard-header">
-            <h1>Escolha o Nível</h1>
-            <div class="user-info" id="userInfo"></div>
-            <button onclick="logout()" class="logout-btn">Sair</button>
-        </header>
-        <div class="challenges-container">
-            <div class="challenge-card">
-                <h2>Iniciante</h2>
-                <button onclick="selectLevel('beginner')">Começar</button>
+    <div class="level-selection-container">
+        <!-- Sidebar Navigation -->
+        <aside class="app-sidebar">
+            <div class="sidebar-header">
+                <div class="app-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Estude-Aqui</span>
+                </div>
             </div>
-            <div class="challenge-card">
-                <h2>Intermediário</h2>
-                <button onclick="selectLevel('intermediate')">Começar</button>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </button>
             </div>
-            <div class="challenge-card">
-                <h2>Avançado</h2>
-                <button onclick="selectLevel('advanced')">Começar</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="level-selection-content">
+            <header class="content-header">
+                <div class="header-title">
+                    <h1>Escolha seu Nível</h1>
+                </div>
+                <div class="user-profile">
+                    <div class="user-profile">
+                        <div class="user-details" id="userInfo"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="level-cards-container">
+                <!-- Beginner Level Card -->
+                <div class="level-card beginner">
+                    <div class="card-header">
+                        <div class="level-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h2>Iniciante</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="level-features">
+                            <li><i class="fas fa-check"></i> Conceitos básicos</li>
+                            <li><i class="fas fa-check"></i> Exercícios simples</li>
+                            <li><i class="fas fa-check"></i> Ritmo mais lento</li>
+                        </ul>
+                    </div>
+                    <button class="start-btn" onclick="selectLevel('beginner')">
+                        <i class="fas fa-play"></i>
+                        Começar Jornada
+                    </button>
+                </div>
+
+                <!-- Intermediate Level Card -->
+                <div class="level-card intermediate">
+                    <div class="card-header">
+                        <div class="level-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h2>Intermediário</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="level-features">
+                            <li><i class="fas fa-check"></i> Desafios moderados</li>
+                            <li><i class="fas fa-check"></i> Aprofundamento</li>
+                            <li><i class="fas fa-check"></i> Projetos práticos</li>
+                        </ul>
+                    </div>
+                    <button class="start-btn" onclick="selectLevel('intermediate')">
+                        <i class="fas fa-play"></i>
+                        Avançar Conhecimento
+                    </button>
+                </div>
+
+                <!-- Advanced Level Card -->
+                <div class="level-card advanced">
+                    <div class="card-header">
+                        <div class="level-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h2>Avançado</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="level-features">
+                            <li><i class="fas fa-check"></i> Tópicos complexos</li>
+                            <li><i class="fas fa-check"></i> Desafios reais</li>
+                            <li><i class="fas fa-check"></i> Projetos completos</li>
+                        </ul>
+                    </div>
+                    <button class="start-btn" onclick="selectLevel('advanced')">
+                        <i class="fas fa-play"></i>
+                        Dominar a Matéria
+                    </button>
+                </div>
             </div>
-        </div>
-        <button onclick="window.location.href='dashboard.html'" class="back-btn">Voltar</button>
+
+            <footer class="content-footer">
+                <button class="back-btn" onclick="window.location.href='dashboard.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar para Matérias
+                </button>
+                <div class="motivational-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>A educação não é preparação para a vida; a educação é a própria vida.</p>
+                    <span>- John Dewey</span>
+                </div>
+            </footer>
+        </main>
     </div>
+
     <script src="js/database.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/select-level.js"></script>
 </body>
+
 </html>
