@@ -24,7 +24,7 @@ const dbOperations = {
     // Register new user
     registerUser: async (userData) => {
         try {
-            const response = await fetch('http://localhost:3000/api/register', {
+            const response = await fetch('https://back-end-plataforma-educacional.onrender.com/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const dbOperations = {
     // Login user
     loginUser: async (email, password) => {
         try {
-            const response = await fetch('http://localhost:3000/api/login', {
+            const response = await fetch('https://back-end-plataforma-educacional.onrender.com/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const dbOperations = {
     // Save progress
     saveProgress: async (userId, subject, level, score) => {
         try {
-            const response = await fetch('http://localhost:3000/api/progress', {
+            const response = await fetch('https://back-end-plataforma-educacional.onrender.com/api/progress', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const dbOperations = {
     // Get user progress
     getProgress: async (userId) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/progress/${userId}`);
+            const response = await fetch(`https://back-end-plataforma-educacional.onrender.com/api/progress/${userId}`);
             const data = await response.json();
             if (!data.success) {
                 throw new Error(data.error);
