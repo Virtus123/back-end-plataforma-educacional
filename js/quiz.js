@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('questionContainer').innerHTML = '<div class="loading">Carregando questões...</div>';
 
         // Buscar questões da API
-        const response = await fetch(`http://localhost:3000/api/questions/${encodeURIComponent(subject)}/${encodeURIComponent(level)}`, {
+        const response = await fetch(`https://back-end-plataforma-educacional.onrender.com/api/questions/${encodeURIComponent(subject)}/${encodeURIComponent(level)}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
